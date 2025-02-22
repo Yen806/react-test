@@ -56,9 +56,13 @@ function App() {
           value={''}
           onChange={() => { }}
         >
-          <option value={'類別 value'}>
-            類別 1
-          </option>
+          {categories.map((item)=>{
+            return(
+            <option value={item}>
+              {item}
+            </option>)
+          })}
+          
         </select>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
